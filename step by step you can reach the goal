@@ -1,0 +1,38 @@
+# Weather_App Создаем папку ui.main
+Создаем папку home,внутри HomeFragment
+имплементируем необходимые библиотеки
+меняем в xml main activity на фрагмент контейнер вию и даем айдишку
+для вию пейджара создаем директиву в папке res, называем menu и внтри ресурс файл меню, добавляем vector asset pictures
+в маинактивити xml добавляем bottomnavigationView и указываем айдишку нашего меню, и в маинкативити делаем переход между нашем вию пейджером, сохдав citiesFragment
+все тексат сохраянемв string ресурсах
+в папке home создаем HomeViewModel
+в папке model создаем Repository
+в папке model создаем Interface в нем будет метод который будет возвращать объект weather
+и там же есть лист weather
+создаем data class который в дальнейшем будет изменен
+<<<<<<<  Request это запрос, а Repository это ответ >>>>>>>>>
+создаем аккаунт на openweathermap заходим --->
+cоздаем liveData под тип Weather и передать ему repository и сделать так чтобы он возвращал livedata
+есть понимание что такое API, есть HTTP и HTTPS ,гипертекст и все остального в методичке все прописана
+Создаем папку Utils,внутри constant val API key and BASE_URL 
+и на сайте есть запросы как правильно строить есть BASE_URL + endPoint + Query параметры + API_KEY
+для теста есть сайт postman.co
+по get запросу нам может вернуть xml и json форматах
+и создаем классы под тип параметров именно какие параметры нам необходимы в папке Utils смотря на get запрос на сайте post man 
+@SerializedName("feels_like") как указано в post man и нельзя его менять ---> а снизу можнго помеять как тебе удобно ---> val feelsLike: Double,
+создаем ретрофит в классе NetworkUtils и плюс гет запрос
+@GET("weather")
+    fun getWeather(
+        @Query("q") q: String, --> это город которым нам нужен
+        @Query("appid") appid: String, наша API_KEY
+        @Query("lang") lang: String, на каком языке нам вернеться
+        @Query("units") units: String, и вернеться в цельсиях 
+    ) : Call<Weather>
+    
+    меняем класс репозитории
+    
+    
+    
+    
+    
+   если хотим создать для поиска надо будет надо создать гетзапрос 
