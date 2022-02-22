@@ -51,6 +51,11 @@ class HomeFragment : Fragment() {
         binding.refresh.setOnClickListener {
             viewModel.liveDataForCurrent.observe(viewLifecycleOwner){
                 binding.apply {
+                    latit.text = ""
+                    longtit.text = ""
+                    tempFact.text = ""
+                    tempFeel.text = ""
+                    city.text = ""
                     latit.text = it.coord.lat.toString()
                     longtit.text = it.coord.lon.toString()
                     tempFact.text = it.main.temp.toString()

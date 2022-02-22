@@ -5,7 +5,7 @@ import com.example.weather_app.network.NetworkUtils
 import retrofit2.Call
 import java.net.NetworkInterface
 
-class Repository(val networkUtils: NetworkUtils) : RepoImp{
+class Repository(val networkUtils: NetworkUtils) : RepoImp {
 
 
     //    override fun getCurrentCity(): Weather {
@@ -20,8 +20,10 @@ class Repository(val networkUtils: NetworkUtils) : RepoImp{
 //        weatherList.add(Weather("Moscow","55.78","37.61","25","22"))
 //        return weatherList
 //    }
-    override fun getCurrentCity(q: String, appId: String, lang: String, units: String
+    override fun getCurrentCity(q: String, appId: String, lang: String, units: String,
     ): Call<Weather> {
-        return networkUtils.getWeather(q,appId,lang,units)
+        return networkUtils.getWeather(q, appId, lang, units)
     }
+
+
 }

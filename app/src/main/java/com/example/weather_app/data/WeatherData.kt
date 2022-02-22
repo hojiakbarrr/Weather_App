@@ -4,4 +4,5 @@ data class WeatherData (
 
      val main: String,
      val description: String,
-        )
+
+     )

@@ -20,6 +20,7 @@ interface NetworkUtils {
     ) : Call<Weather>
 
 
+
     companion object{
         private var retrofitService: NetworkUtils? = null
         fun getInstance(): NetworkUtils{

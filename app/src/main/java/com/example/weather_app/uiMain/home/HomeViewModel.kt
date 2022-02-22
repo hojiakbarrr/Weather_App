@@ -14,7 +14,6 @@ import javax.security.auth.callback.Callback
 class HomeViewModel:ViewModel() {
 
      var liveDataForCurrent = MutableLiveData<Weather> ()
-    private var liveDataForList = MutableLiveData<List<Weather>> ()
 
     private val repository = Repository(NetworkUtils.getInstance())
 
